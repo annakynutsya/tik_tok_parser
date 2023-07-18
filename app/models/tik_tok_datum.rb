@@ -1,0 +1,2 @@
+class TikTokDatum < ApplicationRecord
+end

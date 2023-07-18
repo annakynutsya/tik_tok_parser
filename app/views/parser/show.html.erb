@@ -1,0 +1,25 @@
+<div class="container mx-auto mt-8">
+    <h2 class="text-2xl font-bold mb-4">Results of search</h2>
+
+    <table class="table-auto w-full">
+      <thead>
+        <tr>
+          <th class="px-4 py-2">UserName</th>
+          <th class="px-4 py-2">Amount of followers</th>
+          <th class="px-4 py-2">Average views</th>
+          <th class="px-4 py-2">Description</th>
+          <th class="px-4 py-2">Email</th>
+          <th class="px-4 py-2">Social medias</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @data.each do |row| %>
+          <tr>
+            <% row.each do |value| %>
+              <td class="border px-4 py-2"><%= value %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,17 @@
+<div class="flex flex-col items-center mt-8">
+    <h1 class="text-3xl font-bold mb-4">TikTok Parser</h1>
+
+    <%= form_tag(parse_data_tik_tok_parser_index_path, method: :post, class: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4") do %>
+      <div class="mb-4">
+        <%= label_tag 'search_query', 'Enter the keyword for search:', class: "block text-gray-700 text-sm font-bold mb-2" %>
+        <%= text_field_tag 'search_query', nil, required: true, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+      </div>
+      <div class="mb-6">
+        <%= label_tag 'quantity', 'Enter the quantity of results you want to receive:', class: "block text-gray-700 text-sm font-bold mb-2" %>
+        <%= number_field_tag 'quantity', nil, required: true, min: 1, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+      </div>
+      <div class="flex justify-center">
+        <%= submit_tag 'Search', class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+      </div>
+    <% end %>
+  </div>
