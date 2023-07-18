@@ -20,7 +20,7 @@ class ParserService
   def setup_driver
     options = Selenium::WebDriver::Firefox::Options.new
     options.add_argument('--headless')
-    options.binary = ENV['MOZ_HEADLESS_BINARY'] if ENV['MOZ_HEADLESS_BINARY']
+    options.binary = '/usr/lib/firefox/firefox'
     @driver = Selenium::WebDriver.for :firefox, options: options
     @wait = Selenium::WebDriver::Wait.new(timeout: 180)
   end
